@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-west-2"
+  region = "us-east-1"
 }
 
 resource "random_pet" "petname" {
@@ -11,7 +11,7 @@ resource "aws_s3_bucket" "sample" {
   bucket = random_pet.petname.id
 
   acl    = "public-read"
-  region = "us-west-2"
+  region = "us-east-1"
 
   tags = {
     public_bucket = true
